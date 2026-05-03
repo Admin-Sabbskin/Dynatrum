@@ -1,1 +1,6 @@
-export { default as HomePage } from './HomePage'
+export { default as Home } from './Home'
+export { default as Services } from './Services'
+export { default as Methodology } from './Methodology'
+export { default as CaseStudies } from './CaseStudies'
+export { default as About } from './About'
+export { default as Contact } from './Contact'

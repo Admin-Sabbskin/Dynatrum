@@ -1,7 +1,0 @@
-export { default as Hero } from './Hero'
-export { default as ZoomSequence } from './ZoomSequence'
-export { default as HighlightNarrative } from './HighlightNarrative'
-export { default as Services } from './Services'
-export { default as Process } from './Process'
-export { default as CaseStudies } from './CaseStudies'
-export { default as CTA } from './CTA'
