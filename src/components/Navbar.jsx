@@ -47,9 +47,9 @@ function Navbar() {
             }}
           >
             <img
-              src="/favicon.jpg"
+              src="/favicon.png"
               alt="Dynatrum logo"
-              className="h-10 w-10 rounded-md border border-[rgba(201,174,115,0.35)] object-cover sm:h-11 sm:w-11 lg:h-12 lg:w-12"
+              className="h-11 w-11 object-contain sm:h-12 sm:w-12 lg:h-14 lg:w-14"
             />
             <span className="flex flex-col">
               <span className="font-heading text-[1.55rem] tracking-[0.18em] text-[var(--color-gold)] sm:text-[1.75rem] lg:text-[1.9rem]">
