@@ -32,7 +32,7 @@ function About() {
             />
             <div className="absolute -inset-2 rounded-[2rem] border border-[rgba(201,174,115,0.18)]" />
             <img
-              src="/sabbeen-placeholder.svg"
+              src="/sabbeen-sheikkh.jpg"
               alt="Sabbeen Sheikkh portrait placeholder"
               loading="lazy"
               className="relative h-[520px] w-full rounded-[1.8rem] border border-[rgba(255,255,255,0.06)] object-cover"

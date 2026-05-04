@@ -35,7 +35,7 @@ function Navbar() {
         <div className="flex h-20 items-center justify-between gap-4 px-4 sm:px-6 lg:h-24 lg:px-8">
           <Link
             to="/"
-            className="leading-none"
+            className="flex items-center gap-3 leading-none"
             onMouseEnter={() => {
               void preloadRoute('/')
             }}
@@ -46,11 +46,18 @@ function Navbar() {
               setIsMenuOpen(false)
             }}
           >
-            <span className="font-heading text-[1.55rem] tracking-[0.18em] text-[var(--color-gold)] sm:text-[1.75rem] lg:text-[1.9rem]">
-              DYNATRUM
-            </span>
-            <span className="mt-1 block text-[10px] uppercase tracking-[0.15em] text-[var(--color-text-muted)]">
-              Finance-Led ERP Consulting
+            <img
+              src="/favicon.jpg"
+              alt="Dynatrum logo"
+              className="h-10 w-10 rounded-md border border-[rgba(201,174,115,0.35)] object-cover sm:h-11 sm:w-11 lg:h-12 lg:w-12"
+            />
+            <span className="flex flex-col">
+              <span className="font-heading text-[1.55rem] tracking-[0.18em] text-[var(--color-gold)] sm:text-[1.75rem] lg:text-[1.9rem]">
+                DYNATRUM
+              </span>
+              <span className="mt-1 text-[10px] uppercase tracking-[0.15em] text-[var(--color-text-muted)]">
+                Finance-Led ERP Consulting
+              </span>
             </span>
           </Link>
 
