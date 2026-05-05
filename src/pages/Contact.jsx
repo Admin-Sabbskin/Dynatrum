@@ -2,9 +2,10 @@ import emailjs from '@emailjs/browser'
 import { useRef, useState } from 'react'
 import FadeUp from '../components/FadeUp'
 
-const SERVICE_ID = 'TODO_SERVICE_ID'
-const TEMPLATE_ID = 'TODO_TEMPLATE_ID'
-const PUBLIC_KEY = 'TODO_PUBLIC_KEY'
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+const CONTACT_EMAIL = 'info@dynatrum.com'
 
 function Contact() {
   const formRef = useRef(null)
@@ -63,7 +64,7 @@ function Contact() {
     } catch {
       setStatus('error')
       setStatusMessage(
-        'Something went wrong. Please email directly at sabbeensheikkh@yahoo.com',
+        `Something went wrong. Please email directly at ${CONTACT_EMAIL}`,
       )
     } finally {
       setIsSubmitting(false)
@@ -93,12 +94,11 @@ function Contact() {
               </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Email</p>
-                {/* TODO: update with custom domain email */}
                 <a
-                  href="mailto:sabbeensheikkh@yahoo.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="mt-1 block text-lg text-[var(--color-white)]"
                 >
-                  sabbeensheikkh@yahoo.com
+                  {CONTACT_EMAIL}
                 </a>
               </div>
             </div>
