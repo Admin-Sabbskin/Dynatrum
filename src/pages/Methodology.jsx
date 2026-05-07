@@ -116,38 +116,37 @@ function Methodology() {
             <div className="section-rule" aria-hidden="true" />
           </div>
           <div className="section-shell py-20 md:py-24">
-            <FadeUp>
-              <div className="flex items-baseline gap-4">
-                <span className="font-heading text-5xl leading-none text-[var(--color-gold)] md:text-6xl">
-                  {phase.number}
-                </span>
-                <span className="text-xs uppercase tracking-[0.24em] text-[var(--color-gold)]">
-                  {phase.name}
-                </span>
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-12">
+              <div>
+                <FadeUp>
+                  <p className="font-heading text-6xl leading-none text-[var(--color-gold)] md:text-7xl">
+                    {phase.number}
+                  </p>
+                  <p className="mt-3 text-xs uppercase tracking-[0.24em] text-[var(--color-gold)]">
+                    {phase.name}
+                  </p>
+                  <div className="mt-4 h-px w-16 bg-[var(--color-gold)]/60" />
+                </FadeUp>
+                <FadeUp delay={0.05}>
+                  <article>
+                    <h2 className="mt-8">{phase.name}</h2>
+                    <p className="mt-6 max-w-3xl text-[var(--color-text-muted)]">{phase.description}</p>
+
+                    <ul className="timeline-dash mt-8 space-y-3 text-sm">
+                      {phase.activities.map((activity) => (
+                        <li key={activity}>{activity}</li>
+                      ))}
+                    </ul>
+                  </article>
+                </FadeUp>
               </div>
-              <div className="mt-4 h-px w-16 bg-[var(--color-gold)]/60" />
-            </FadeUp>
-
-            <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-12">
-              <FadeUp>
-                <article>
-                  <h2>{phase.name}</h2>
-                  <p className="mt-6 max-w-3xl text-[var(--color-text-muted)]">{phase.description}</p>
-
-                  <ul className="timeline-dash mt-8 space-y-3 text-sm">
-                    {phase.activities.map((activity) => (
-                      <li key={activity}>{activity}</li>
-                    ))}
-                  </ul>
-                </article>
-              </FadeUp>
 
               <MotionDiv
                 initial={{ opacity: 0, y: 20, scale: 0.98 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, amount: 0.32 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
-                className="card-hover glass-panel h-fit rounded-[1.5rem] p-6"
+                className="card-hover glass-panel h-fit rounded-[1.5rem] p-6 lg:sticky lg:top-32"
               >
                 <p className="kicker">Phase Signal</p>
                 <p className="mt-4 text-sm text-[var(--color-text)]">{phase.signal}</p>
@@ -173,15 +172,15 @@ function Methodology() {
 
       <section className="section-shell py-20 md:py-24">
         <FadeUp>
-          <p className="kicker text-center">Implementation Phases</p>
+          <p className="kicker">Implementation Phases</p>
         </FadeUp>
         <FadeUp delay={0.05}>
-          <h2 className="mx-auto mt-4 max-w-4xl text-balance text-center">
+          <h2 className="mt-4 max-w-4xl text-balance">
             Crawl. Walk. Run.
           </h2>
         </FadeUp>
         <FadeUp delay={0.08}>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-[var(--color-text-muted)]">
+          <p className="mt-4 max-w-2xl text-[var(--color-text-muted)]">
             Big-bang ERP rollouts are where programs go to die. We sequence value in three
             controlled waves so teams stabilize before scaling.
           </p>
@@ -211,10 +210,10 @@ function Methodology() {
 
       <section className="section-shell py-20 md:py-24">
         <FadeUp>
-          <p className="kicker text-center">Flow Diagram</p>
+          <p className="kicker">Flow Diagram</p>
         </FadeUp>
         <FadeUp delay={0.05}>
-          <h2 className="mx-auto mt-4 max-w-4xl text-balance text-center">
+          <h2 className="mt-4 max-w-4xl text-balance">
             Five phases, one continuous arc.
           </h2>
         </FadeUp>
@@ -226,8 +225,8 @@ function Methodology() {
           className="glass-panel mt-10 overflow-x-auto rounded-[1.8rem] p-6 md:p-10"
         >
             <svg
-              viewBox="0 0 1040 220"
-              className="h-[220px] w-full min-w-[960px]"
+              viewBox="0 0 1140 220"
+              className="h-[220px] w-full min-w-[820px]"
               role="img"
               aria-label="Five phase methodology diagram"
             >
@@ -249,22 +248,27 @@ function Methodology() {
               </defs>
 
               {phases.map((phase, index) => {
-                const x = 28 + index * 204
+                const rectW = 196
+                const gap = 30
+                const x = 20 + index * (rectW + gap)
+                const labelLines = phase.name.includes('&')
+                  ? phase.name.split(' & ')
+                  : [phase.name]
                 return (
                   <g key={phase.name}>
                     <rect
                       x={x}
-                      y="58"
-                      width="168"
-                      height="104"
+                      y="54"
+                      width={rectW}
+                      height="112"
                       rx="18"
                       fill="url(#phaseFill)"
                       stroke="rgba(201, 174, 115, 0.30)"
                       strokeWidth="1"
                     />
                     <text
-                      x={x + 18}
-                      y="94"
+                      x={x + 20}
+                      y="92"
                       fill="#C4A96B"
                       fontSize="22"
                       fontFamily="Cormorant Garamond"
@@ -272,28 +276,31 @@ function Methodology() {
                       {phase.number}
                     </text>
                     <text
-                      x={x + 18}
-                      y="126"
+                      x={x + 20}
+                      y="122"
                       fill="#F5F3EE"
-                      fontSize="17"
+                      fontSize={labelLines.length > 1 ? 15 : 17}
                       fontFamily="DM Sans"
                     >
-                      {phase.name}
+                      <tspan x={x + 20} dy="0">{labelLines[0]}{labelLines.length > 1 ? ' &' : ''}</tspan>
+                      {labelLines.length > 1 ? (
+                        <tspan x={x + 20} dy="18">{labelLines[1]}</tspan>
+                      ) : null}
                     </text>
                     <line
-                      x1={x + 18}
-                      y1="140"
-                      x2={x + 60}
-                      y2="140"
+                      x1={x + 20}
+                      y1={labelLines.length > 1 ? 152 : 138}
+                      x2={x + 62}
+                      y2={labelLines.length > 1 ? 152 : 138}
                       stroke="rgba(201,174,115,0.55)"
                       strokeWidth="1"
                     />
 
                     {index < phases.length - 1 ? (
                       <line
-                        x1={x + 168}
+                        x1={x + rectW}
                         y1="110"
-                        x2={x + 204}
+                        x2={x + rectW + gap}
                         y2="110"
                         stroke="#C4A96B"
                         strokeWidth="1.4"
