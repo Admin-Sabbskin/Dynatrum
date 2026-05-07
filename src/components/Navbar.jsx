@@ -56,7 +56,7 @@ function Navbar() {
                 DYNATRUM
               </span>
               <span className="mt-1 text-[10px] uppercase tracking-[0.15em] text-[var(--color-text-muted)]">
-                Finance-Led ERP Consulting
+                Enterprise ERP Consulting
               </span>
             </span>
           </Link>

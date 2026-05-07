@@ -6,73 +6,73 @@ const MotionDiv = motion.div
 const phases = [
   {
     number: '01',
-    name: 'Diagnose',
+    name: 'Initiating',
     description:
-      'We begin by mapping your current finance process landscape and identifying operational pain points that impact reporting, close cycle, and control quality.',
+      'We define the business case, identify stakeholders, and establish governance — setting the boundaries before scope can drift.',
     activities: [
-      'Business analysis',
-      'Pain point identification',
-      'ERP readiness assessment',
+      'Business case definition',
+      'Stakeholder identification',
+      'Governance and charter setup',
     ],
-    signal: 'Risk heatmap and control gaps documented.',
-    metricLabel: 'Readiness confidence',
-    metricValue: '68%',
+    signal: 'Charter signed and stakeholder map locked.',
+    metricLabel: 'Time to charter',
+    metricValue: '<2 wks',
   },
   {
     number: '02',
-    name: 'Design',
+    name: 'Planning',
     description:
-      'With baseline clarity in place, we define requirements, architecture, and governance standards that align ERP capabilities with finance outcomes.',
+      'We build the execution roadmap with WBS, resource allocation, schedule, and budget — the plan that every phase gate is measured against.',
     activities: [
-      'Requirements mapping',
-      'Solution architecture',
-      'ERP selection and governance alignment',
+      'WBS and schedule build-out',
+      'Resource and budget allocation',
+      'Risk and change-control plan',
     ],
-    signal: 'Future-state model validated by finance leadership.',
-    metricLabel: 'Design sign-off speed',
-    metricValue: '2.1x',
+    signal: 'Baseline plan approved across functions.',
+    metricLabel: 'Plan baseline depth',
+    metricValue: 'WBS L4',
   },
   {
     number: '03',
-    name: 'Deploy',
+    name: 'Executing',
     description:
-      'Execution is managed through disciplined sprint milestones covering build, migration, testing, and validation gates before launch.',
+      'We deliver the work through sprint-based execution within Waterfall phase gates — hybrid agility without losing audit-grade control.',
     activities: [
-      'System implementation',
-      'Data migration',
-      'Testing and validation',
+      'Configuration and build sprints',
+      'Data migration and integration',
+      'UAT coordination and signoff',
     ],
-    signal: 'Milestone board in control with clear ownership.',
+    signal: 'Phase gates moving on plan with finance ownership.',
     metricLabel: 'Delivery predictability',
     metricValue: '91%',
   },
   {
     number: '04',
-    name: 'Stabilize',
+    name: 'Monitoring & Controlling',
     description:
-      'Post go-live, we focus on adoption continuity, issue resolution, and practical enablement so teams can operate with confidence from day one.',
+      'We track progress against plan and manage scope through formal change control — so enhancements never become uncontrolled scope creep.',
     activities: [
-      'Go-live support',
-      'Issue resolution',
-      'User training and support',
+      'Earned value tracking',
+      'Formal change control board',
+      'Risk and issue management',
     ],
-    signal: 'Adoption and issue triage rhythm stabilized.',
-    metricLabel: 'Go-live issue turnaround',
-    metricValue: '48h',
+    signal: 'Scope held; variance contained inside thresholds.',
+    metricLabel: 'Scope variance',
+    metricValue: '<5%',
   },
   {
     number: '05',
-    name: 'Scale',
+    name: 'Closing',
     description:
-      'Once the foundation is stable, we optimize workflows, automate repetitive controls, and unlock advanced reporting for long-term enterprise value.',
+      'We close formally — handover, lessons learned, and a clean transition into hyper-care and ongoing support.',
     activities: [
-      'Process optimization',
-      'Automation enablement',
-      'Advanced reporting and analytics',
+      'Formal acceptance and handover',
+      'Lessons learned and benefits review',
+      'Transition to support and optimization',
     ],
-    signal: 'Continuous optimization backlog activated.',
-    metricLabel: 'Automation opportunity',
-    metricValue: '+37%',
+    signal: 'Program closed cleanly with documented handover.',
+    metricLabel: 'Hyper-care turnaround',
+    metricValue: '48h',
   },
 ]
 
@@ -82,12 +82,16 @@ function Methodology() {
       <section className="section-shell flex min-h-[58svh] items-end py-20 pt-32 md:pt-36">
         <div>
           <FadeUp>
-            <h1 className="max-w-4xl">The five-phase framework.</h1>
+            <p className="kicker">PMP-Aligned Hybrid Delivery</p>
           </FadeUp>
           <FadeUp delay={0.05}>
+            <h1 className="mt-6 max-w-4xl">The five PMP process groups, executed as a hybrid program.</h1>
+          </FadeUp>
+          <FadeUp delay={0.1}>
             <p className="mt-7 max-w-3xl text-lg text-[var(--color-text-muted)]">
-              Every engagement follows the same disciplined structure - because ERP
-              transformations fail when process is improvised.
+              ERP fails when execution is either too rigid or too loose. Our model combines
+              Waterfall governance — phase gates, approvals, auditability — with Agile execution
+              for iterative delivery and faster stakeholder alignment.
             </p>
           </FadeUp>
 
@@ -166,6 +170,44 @@ function Methodology() {
           </div>
         </section>
       ))}
+
+      <section className="section-shell py-20 md:py-24">
+        <FadeUp>
+          <p className="kicker text-center">Implementation Phases</p>
+        </FadeUp>
+        <FadeUp delay={0.05}>
+          <h2 className="mx-auto mt-4 max-w-4xl text-balance text-center">
+            Crawl. Walk. Run.
+          </h2>
+        </FadeUp>
+        <FadeUp delay={0.08}>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-[var(--color-text-muted)]">
+            Big-bang ERP rollouts are where programs go to die. We sequence value in three
+            controlled waves so teams stabilize before scaling.
+          </p>
+        </FadeUp>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="glass-panel rounded-2xl p-7">
+            <p className="kicker">Phase 1 · Crawl</p>
+            <h3 className="mt-4">Core ERP first</h3>
+            <p className="mt-3 text-sm text-[var(--color-text-muted)]">GL, AP, AR, and the close cycle.</p>
+            <p className="mt-5 text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Target: 3–4 months</p>
+          </div>
+          <div className="glass-panel rounded-2xl p-7">
+            <p className="kicker">Phase 2 · Walk</p>
+            <h3 className="mt-4">Operational depth</h3>
+            <p className="mt-3 text-sm text-[var(--color-text-muted)]">Procurement and Inventory layered onto a stable core.</p>
+            <p className="mt-5 text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Target: 2–3 months</p>
+          </div>
+          <div className="glass-panel rounded-2xl p-7">
+            <p className="kicker">Phase 3 · Run</p>
+            <h3 className="mt-4">Advanced and optimized</h3>
+            <p className="mt-3 text-sm text-[var(--color-text-muted)]">Advanced modules, integrations, and BI optimization.</p>
+            <p className="mt-5 text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Target: 2–4 months</p>
+          </div>
+        </div>
+      </section>
 
       <section className="section-shell py-20 md:py-24">
         <FadeUp>

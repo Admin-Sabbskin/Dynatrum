@@ -8,28 +8,60 @@ const MotionArticle = motion.article
 const caseStudies = [
   {
     id: '01',
-    industry: 'Manufacturing',
-    challenge: 'Outgrown QuickBooks, multi-entity chaos, no audit trail.',
-    solution: 'Oracle NetSuite implementation with custom financial structure.',
-    result: '40% reduction in month-end close time',
-    tags: ['NetSuite', 'Manufacturing', 'Finance Transformation'],
+    industry: 'Global Oilfield Services',
+    challenge:
+      '200+ legal entities across 25 countries with fragmented consolidation and inconsistent reporting.',
+    solution:
+      'Oracle EBS plus Hyperion consolidation, multi-currency and multi-GAAP harmonized into a single reporting backbone.',
+    result: '200+ entities consolidated across 25 countries',
+    tags: ['Oracle EBS', 'Hyperion', 'Multi-Entity'],
   },
   {
     id: '02',
-    industry: 'SaaS / Technology',
-    challenge: 'Investor due diligence required GAAP-compliant reporting.',
+    industry: 'National Retail Chain',
+    challenge: 'Aging finance stack and rising audit pressure ahead of expansion.',
     solution:
-      'Revenue recognition configuration plus chart of accounts redesign for governance.',
-    result: 'Audit-ready financials in 8 weeks',
-    tags: ['SAP', 'SaaS', 'Revenue Recognition'],
+      'Dynamics 365 v9.0 Finance implementation with phase-gated delivery and finance-led UAT.',
+    result: 'Delivered on time and under budget',
+    tags: ['Dynamics 365', 'Retail', 'Finance'],
   },
   {
     id: '03',
-    industry: 'Retail / eCommerce',
-    challenge: 'Legacy system limitations, vendor end-of-life, scaling operations.',
-    solution: 'Microsoft Dynamics 365 phased rollout with secure data migration.',
-    result: 'Zero data loss migration across 5 legal entities',
-    tags: ['Dynamics 365', 'Retail', 'Data Migration'],
+    industry: 'Multinational Pharmaceutical',
+    challenge: 'Global rollout requirement under SOX and FDA regulatory constraints.',
+    solution:
+      'Global Epicor rollout across all modules with controls aligned to SOX and FDA validation requirements.',
+    result: 'Global rollout, SOX and FDA compliant',
+    tags: ['Epicor', 'Pharma', 'SOX / FDA'],
+  },
+  {
+    id: '04',
+    industry: '100+ Subsidiary Group',
+    challenge:
+      'Legacy Oracle landscape no longer fit-for-purpose across 16 country operations.',
+    solution:
+      'Oracle ERP reimplementation across 16 countries, board-selected after a structured Phase 0 evaluation.',
+    result: 'Board-selected reimplementation across 16 countries',
+    tags: ['Oracle', 'Phase 0', 'Multi-Country'],
+  },
+  {
+    id: '05',
+    industry: 'Engineering Conglomerate',
+    challenge: 'Duplicated ERP estate and rising IT run costs across business units.',
+    solution:
+      'Oracle and Sage ACCPAC integration with rationalized architecture and shared services alignment.',
+    result: '30% IT cost reduction',
+    tags: ['Oracle', 'Sage ACCPAC', 'Integration'],
+  },
+  {
+    id: '06',
+    industry: 'Multi-Stream D365 Program',
+    challenge:
+      'End-to-end Dynamics 365 F&O delivery with 5–8 concurrent workstreams under tight governance.',
+    solution:
+      'Hybrid Waterfall + Agile delivery, PMP governance, cross-functional control across all streams.',
+    result: '5–8 concurrent workstreams under unified governance',
+    tags: ['D365 F&O', 'PMP', 'Hybrid Delivery'],
   },
 ]
 
@@ -96,10 +128,10 @@ function CaseStudies() {
       <section className="section-shell flex min-h-[58svh] items-end py-20 pt-32 md:pt-36">
         <div>
           <p className="kicker">Outcomes</p>
-          <h1 className="mt-6 max-w-4xl">Transformations that moved the needle.</h1>
+          <h1 className="mt-6 max-w-4xl">Six engagements that moved the needle.</h1>
           <p className="mt-7 max-w-3xl text-lg text-[var(--color-text-muted)]">
-            Three engagements, three platforms, three measurable outcomes — each
-            engineered around how finance teams actually need to operate.
+            Multi-entity consolidations, multi-country rollouts, and PMP-governed
+            programs across pharma, oil &amp; gas, manufacturing, retail, and engineering.
           </p>
         </div>
       </section>

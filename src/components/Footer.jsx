@@ -4,7 +4,7 @@ import { navigationRoutes, preloadRoute } from '../routePreload'
 const serviceLinks = [
   'ERP Advisory',
   'ERP Implementation',
-  'Finance Transformation',
+  'Business Process Transformation',
   'Post-Go-Live Support',
 ]
 
@@ -21,7 +21,10 @@ function Footer() {
               DYNATRUM
             </p>
             <p className="mt-3 text-sm uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
-              Finance-Led ERP Consulting
+              Enterprise ERP Consulting
+            </p>
+            <p className="mt-4 text-sm text-[var(--color-text-muted)]">
+              Oakville, Ontario, Canada
             </p>
           </div>
 
@@ -66,10 +69,10 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@dynatrum.com"
+                  href="mailto:hello@dynatrum.com"
                   className="transition-colors hover:text-[var(--color-text)]"
                 >
-                  info@dynatrum.com
+                  hello@dynatrum.com
                 </a>
               </li>
             </ul>
@@ -77,7 +80,7 @@ function Footer() {
         </div>
 
         <div className="mt-12 border-t border-[var(--color-border)] pt-6 text-center text-sm text-[var(--color-text-muted)]">
-          © 2025 Dynatrum. All rights reserved.
+          © 2026 Dynatrum. All rights reserved.
         </div>
       </div>
     </footer>

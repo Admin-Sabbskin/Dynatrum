@@ -44,7 +44,7 @@ function ScrollBrightenText({ text, className = '', progress }) {
 const servicePillars = [
   {
     title: 'ERP Advisory',
-    description: 'Readiness assessments, vendor selection, and implementation roadmapping.',
+    description: 'Readiness assessments, vendor selection, and Phase 0 implementation roadmapping.',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6">
         <path d="M4 5h16v14H4z" fill="none" stroke="currentColor" strokeWidth="1.4" />
@@ -69,8 +69,8 @@ const servicePillars = [
     ),
   },
   {
-    title: 'Finance Transformation',
-    description: 'Chart of accounts redesign, controls, and compliance alignment.',
+    title: 'Business Process Transformation',
+    description: 'Process redesign, data architecture, and controls alignment across functions.',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6">
         <circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" strokeWidth="1.4" />
@@ -80,7 +80,7 @@ const servicePillars = [
   },
   {
     title: 'Post-Go-Live Support',
-    description: 'Optimization, reporting improvements, and ongoing advisory.',
+    description: 'Optimization, reporting improvements, and user adoption.',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6">
         <path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" strokeWidth="1.4" />
@@ -91,11 +91,11 @@ const servicePillars = [
 ]
 
 const methodologySteps = [
-  { phase: 'Diagnose', detail: 'Assess workflows, controls, and ERP readiness risks.' },
-  { phase: 'Design', detail: 'Map requirements and architect a finance-first future state.' },
-  { phase: 'Deploy', detail: 'Configure, migrate, test, and launch with governance.' },
-  { phase: 'Stabilize', detail: 'Support go-live issues, adoption, and process reliability.' },
-  { phase: 'Scale', detail: 'Optimize reporting, automation, and long-term controls.' },
+  { phase: 'Initiating', detail: 'Define the business case, identify stakeholders, establish governance.' },
+  { phase: 'Planning', detail: 'Build the execution roadmap with WBS, resources, schedule, and budget.' },
+  { phase: 'Executing', detail: 'Deliver work through sprint-based execution within Waterfall phase gates.' },
+  { phase: 'Monitoring', detail: 'Track progress against plan and manage scope through formal change control.' },
+  { phase: 'Closing', detail: 'Formal handover, lessons learned, and transition to support.' },
 ]
 
 function Home() {
@@ -195,7 +195,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0 }}
           >
-            ERP Finance Transformation
+            ERP Transformation
           </MotionP>
 
           <MotionH1
@@ -204,7 +204,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.1 }}
           >
-            Where Finance Expertise Meets ERP Precision.
+            ERP programs don't fail in execution. They fail before they start.
           </MotionH1>
 
           <MotionP
@@ -213,9 +213,9 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.2 }}
           >
-            We help mid-market companies deploy ERP systems that finance teams trust
-            daily - with clarity in controls, speed in reporting, and confidence in
-            every close.
+            We de-risk ERP before it starts &mdash; and execute it with cross-functional
+            governance, hybrid agility, and audit-ready outcomes across every department
+            that touches the system.
           </MotionP>
 
           <MotionDiv
@@ -225,21 +225,22 @@ function Home() {
             transition={{ duration: 0.55, delay: 0.3 }}
           >
             <Button to="/contact" variant="primary">
-              Book a Consultation
+              Start Phase 0
             </Button>
-            <Button to="/services" variant="ghost">
-              View Services
+            <Button to="/methodology" variant="ghost">
+              See How We De-Risk ERP
             </Button>
           </MotionDiv>
 
           <MotionDiv
-            className="gold-frost mt-14 grid gap-4 rounded-3xl p-5 sm:grid-cols-3"
+            className="gold-frost mt-14 grid gap-4 rounded-3xl p-5 sm:grid-cols-2 lg:grid-cols-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.4 }}
           >
-            <p className="text-sm text-[var(--color-text)]">200+ ERP Projects Delivered</p>
-            <p className="text-sm text-[var(--color-text)]">$500M+ Finance Transformed</p>
+            <p className="text-sm text-[var(--color-text)]">200+ Entity Consolidations</p>
+            <p className="text-sm text-[var(--color-text)]">25+ Countries Delivered</p>
+            <p className="text-sm text-[var(--color-text)]">16+ Years ERP Leadership</p>
             <p className="text-sm text-[var(--color-text)]">5-Phase Proven Methodology</p>
           </MotionDiv>
         </MotionDiv>
@@ -334,21 +335,21 @@ function Home() {
               style={{ opacity: textAOpacity, y: textAY }}
               className="absolute mx-auto block w-[min(92vw,56rem)] text-[clamp(1.9rem,4.8vw,4rem)] font-light leading-[1.08] text-[var(--color-white)]"
             >
-              Finance control, made visible.
+              Every department, one system of truth.
             </MotionH2>
 
             <MotionH2
               style={{ opacity: textBOpacity, y: textBY }}
               className="absolute mx-auto block w-[min(92vw,56rem)] text-[clamp(1.9rem,4.8vw,4rem)] font-light leading-[1.08] text-[var(--color-white)]"
             >
-              Execution that holds under audit.
+              Controls move from spreadsheets into the system.
             </MotionH2>
 
             <MotionH2
               style={{ opacity: textCOpacity, y: textCY, scale: textCScale }}
               className="absolute mx-auto block w-[min(92vw,60rem)] text-[clamp(2.2rem,6vw,5rem)] font-light leading-[1.04]"
             >
-              <span className="text-gradient-gold">A finance-grade ERP.</span>
+              <span className="text-gradient-gold">A controlled ERP program.</span>
             </MotionH2>
           </div>
 
@@ -479,7 +480,7 @@ function Home() {
             <ScrollBrightenText
               progress={brightenProgress}
               className="mx-auto mt-8 max-w-5xl text-center font-heading text-[clamp(1.8rem,4.2vw,3.6rem)] font-light leading-[1.18] text-[var(--color-white)]"
-              text="Finance teams stop firefighting. Controls move from spreadsheets into the system. The close becomes a rhythm — predictable, defensible, and quietly fast."
+              text="Teams stop firefighting. Controls move from spreadsheets into the system. ERP becomes a controlled program — predictable, defensible, and audit-ready."
             />
             <MotionDiv
               style={{ width: brightenLineWidth, opacity: brightenLineOpacity }}
@@ -506,6 +507,7 @@ function Home() {
         </FadeUp>
         <FadeUp delay={0.05}>
           <h2 className="mt-4 max-w-3xl">Four pillars of ERP transformation.</h2>
+          <p className="mt-4 max-w-2xl text-[var(--color-text-muted)]">A vendor-independent, PMP-aligned operating model spanning advisory, implementation, process transformation, and post-go-live support.</p>
         </FadeUp>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -533,7 +535,10 @@ function Home() {
             <p className="kicker">Our Process</p>
           </FadeUp>
           <FadeUp delay={0.05}>
-            <h2 className="mt-4 max-w-3xl">A five-phase model built for finance teams.</h2>
+            <h2 className="mt-4 max-w-3xl">A PMP-aligned hybrid delivery model.</h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-2xl text-[var(--color-text-muted)]">Waterfall governance with Agile execution &mdash; phase gates that hold, sprints that move.</p>
           </FadeUp>
 
           <div className="glass-panel mt-10 rounded-3xl p-7 md:p-9">
@@ -562,11 +567,11 @@ function Home() {
       <section className="section-shell py-20 md:py-24">
         <div className="glass-panel rounded-[2rem] p-8 text-center md:p-14">
           <FadeUp>
-            <h2 className="text-gradient-gold">Ready to transform your finance operations?</h2>
+            <h2 className="text-gradient-gold">Turn ERP from a risk into a controlled program.</h2>
           </FadeUp>
           <FadeUp delay={0.05}>
             <p className="mx-auto mt-4 max-w-2xl text-[var(--color-text-muted)]">
-              Book a no-obligation consultation.
+              30 minutes. No obligation. Start with a Phase 0 conversation.
             </p>
           </FadeUp>
           <FadeUp delay={0.1}>

@@ -5,7 +5,7 @@ import FadeUp from '../components/FadeUp'
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-const CONTACT_EMAIL = 'info@dynatrum.com'
+const CONTACT_EMAIL = 'hello@dynatrum.com'
 
 function Contact() {
   const formRef = useRef(null)
@@ -26,7 +26,7 @@ function Contact() {
     if (honeypot) {
       // Silently drop without revealing detection.
       setStatus('success')
-      setStatusMessage('Message sent! Sabbeen will be in touch within 24 hours.')
+      setStatusMessage('Message sent! We will be in touch within one business day.')
       formElement.reset()
       return
     }
@@ -59,7 +59,7 @@ function Contact() {
       })
 
       setStatus('success')
-      setStatusMessage('Message sent! Sabbeen will be in touch within 24 hours.')
+      setStatusMessage('Message sent! We will be in touch within one business day.')
       formElement.reset()
     } catch {
       setStatus('error')
@@ -78,20 +78,14 @@ function Contact() {
         <FadeUp>
           <div className="glass-panel h-full rounded-[1.8rem] p-7 md:p-10">
             <p className="kicker">Contact</p>
-            <h2 className="mt-4">Let's talk about your ERP needs.</h2>
+            <h2 className="mt-4">Book a consultation.</h2>
             <p className="mt-6 text-[var(--color-text-muted)]">
-              In this consultation, we review your current finance process landscape,
-              identify ERP risk areas, and define practical next steps for
-              implementation or transformation.
+              30 minutes. No obligation. We review your current situation, run a quick
+              readiness check, and recommend whether Phase 0, direct implementation, or
+              optimization is the right next step.
             </p>
 
             <div className="mt-10 space-y-5">
-              <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Phone</p>
-                <a href="tel:+16475138192" className="mt-1 block text-lg text-[var(--color-white)]">
-                  +1 647 513 8192
-                </a>
-              </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Email</p>
                 <a
@@ -100,6 +94,23 @@ function Contact() {
                 >
                   {CONTACT_EMAIL}
                 </a>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Phone</p>
+                <a href="tel:+16475138192" className="mt-1 block text-lg text-[var(--color-white)]">
+                  +1 647 513 8192
+                </a>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Location</p>
+                <p className="mt-1 text-lg text-[var(--color-white)]">Oakville, Ontario, Canada</p>
+                <p className="mt-2 text-sm text-[var(--color-text-muted)]">
+                  Serving clients across Canada, USA, UAE, and Pakistan.
+                </p>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Response Time</p>
+                <p className="mt-1 text-sm text-[var(--color-text-muted)]">Within one business day.</p>
               </div>
             </div>
           </div>

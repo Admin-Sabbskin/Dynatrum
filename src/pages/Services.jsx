@@ -9,56 +9,60 @@ const serviceBlocks = [
     number: '01',
     title: 'ERP Advisory',
     description:
-      'Start with clarity before investment. We assess process maturity, identify risk points, and define what a finance-ready ERP environment should look like for your business model.',
+      'A fixed-fee Phase 0 diagnostic that produces a decision-grade package: business process discovery, user requirements specification, weighted vendor scorecards, and a clear ERP boundary diagram — before any vendor is selected.',
     deliverables: [
-      'ERP recommendation report',
-      'Vendor comparison matrix',
+      'Business process discovery report',
+      'User requirements specification',
+      'Weighted vendor selection scorecard',
       'Implementation roadmap',
     ],
-    platforms: 'Platform-independent advisory tailored to your finance priorities.',
-    signal: 'Readiness and risk baseline established.',
-    impact: 'Faster executive decisions before platform commitment.',
+    platforms: 'Vendor-independent advisory — we never resell software or take vendor commissions.',
+    signal: 'Scope, cost, and execution discipline locked before vendor selection.',
+    impact: 'ERP turns from a risk into a controlled program.',
   },
   {
     number: '02',
     title: 'ERP Implementation',
     description:
-      'Implementation is executed through controlled milestones across configuration, migration, testing, and launch. The approach keeps finance ownership visible from requirements to go-live signoff.',
+      'PMP-certified delivery of configuration, data migration, UAT coordination, and go-live execution — governed by phase gates and executed in sprints.',
     deliverables: [
       'Configured ERP system',
-      'Migration logs',
-      'UAT documentation',
+      'Data migration logs and reconciliations',
+      'UAT scripts and signoff records',
+      'Cutover and go-live plan',
     ],
-    platforms: 'Platforms: SAP S/4HANA, Oracle NetSuite, Microsoft Dynamics 365, Odoo.',
-    signal: 'Governed milestones with finance ownership.',
-    impact: 'Reduced go-live surprises and cutover risk.',
+    platforms: 'Platforms: Dynamics 365, Oracle EBS, SAP, Hyperion, Epicor, Sage, Acumatica.',
+    signal: 'Governed milestones with cross-functional ownership.',
+    impact: 'Reduced go-live surprises and audit-ready cutover.',
   },
   {
     number: '03',
-    title: 'Finance Transformation',
+    title: 'Business Process Transformation',
     description:
-      'Technology alone does not fix finance operations. We redesign structures, policies, and controls so financial reporting, compliance, and leadership visibility improve together.',
+      'Process redesign, data architecture, and controls alignment across Finance, Operations, Procurement, and IT — so the ERP encodes good processes, not legacy ones.',
     deliverables: [
-      'Financial structure documentation',
-      'Control frameworks',
-      'Audit-ready reporting setup',
+      'Chart of Accounts design',
+      'Reporting and consolidation architecture',
+      'Controls and SoD framework',
+      'IFRS / GAAP / IFRS 18 mapping',
     ],
-    platforms: 'Financial governance and reporting architecture aligned with ERP capabilities.',
-    signal: 'Controls and reporting logic unified.',
-    impact: 'Higher confidence in board and audit reporting.',
+    platforms: 'System-agnostic process and controls work — every artifact is yours to keep.',
+    signal: 'Controls move from spreadsheets into the system.',
+    impact: 'Higher confidence in board, audit, and regulatory reporting.',
   },
   {
     number: '04',
     title: 'Post-Go-Live Support',
     description:
-      'After launch, we help teams stabilize performance and refine workflows. Support focuses on measurable outcomes, adoption continuity, and the next layer of optimization.',
+      'Hyper-care, user training, optimization, and system health checks — so adoption sticks and the system keeps improving after launch.',
     deliverables: [
-      'Performance reports',
-      'Optimization plans',
-      'Improvement logs',
+      'Hyper-care issue triage',
+      'User training and adoption plan',
+      'Optimization backlog',
+      'System health checks',
     ],
-    platforms: 'Continuous advisory for scaling operations and finance intelligence.',
-    signal: 'Stability and optimization loop activated.',
+    platforms: 'Continuous advisory for scaling operations and reporting.',
+    signal: 'Stabilization and optimization loop activated.',
     impact: 'Sustained value beyond initial launch.',
   },
 ]
@@ -69,10 +73,10 @@ function Services() {
       <section className="section-shell flex min-h-[58svh] items-end py-20 pt-32 md:pt-36">
         <div>
           <p className="kicker">Services</p>
-          <h1 className="mt-6 max-w-4xl">Finance-led ERP, start to finish.</h1>
+          <h1 className="mt-6 max-w-4xl">Four pillars of ERP transformation.</h1>
           <p className="mt-7 max-w-3xl text-lg text-[var(--color-text-muted)]">
-            Structured offerings built around how finance teams actually operate -
-            not just how ERP vendors want to sell.
+            Vendor-independent, PMP-aligned offerings spanning advisory through optimization —
+            built to de-risk ERP before it starts and execute it under audit-grade controls.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
@@ -171,7 +175,7 @@ function Services() {
         </FadeUp>
         <FadeUp delay={0.05}>
           <p className="mx-auto mt-4 max-w-2xl text-[var(--color-text-muted)]">
-            Start with a consultation and get a structured, finance-led next-step plan.
+            Start with a Phase 0 conversation. 30 minutes. No obligation.
           </p>
         </FadeUp>
         <FadeUp delay={0.1}>
