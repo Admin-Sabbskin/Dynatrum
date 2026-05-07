@@ -110,62 +110,62 @@ function Methodology() {
         </div>
       </section>
 
-      {phases.map((phase, index) => (
+      {phases.map((phase) => (
         <section key={phase.name} className="aurora-band relative">
           <div className="section-shell">
             <div className="section-rule" aria-hidden="true" />
           </div>
           <div className="section-shell py-20 md:py-24">
-            <div className="grid gap-10 lg:grid-cols-[210px_1fr] lg:gap-14">
-              <div className="lg:sticky lg:top-32 lg:self-start">
-                <p className="font-heading text-7xl leading-none text-[var(--color-gold)]">
+            <FadeUp>
+              <div className="flex items-baseline gap-4">
+                <span className="font-heading text-5xl leading-none text-[var(--color-gold)] md:text-6xl">
                   {phase.number}
-                </p>
-                <p className="mt-3 text-xs uppercase tracking-[0.24em] text-[var(--color-gold)]">
+                </span>
+                <span className="text-xs uppercase tracking-[0.24em] text-[var(--color-gold)]">
                   {phase.name}
-                </p>
-                <div className="mt-4 h-px w-16 bg-[var(--color-gold)]/60" />
+                </span>
               </div>
+              <div className="mt-4 h-px w-16 bg-[var(--color-gold)]/60" />
+            </FadeUp>
 
-              <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-                <FadeUp>
-                  <article>
-                    <h2>{phase.name}</h2>
-                    <p className="mt-7 max-w-3xl text-[var(--color-text-muted)]">{phase.description}</p>
+            <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-12">
+              <FadeUp>
+                <article>
+                  <h2>{phase.name}</h2>
+                  <p className="mt-6 max-w-3xl text-[var(--color-text-muted)]">{phase.description}</p>
 
-                    <ul className="timeline-dash mt-8 space-y-3 text-sm">
-                      {phase.activities.map((activity) => (
-                        <li key={activity}>{activity}</li>
-                      ))}
-                    </ul>
-                  </article>
-                </FadeUp>
+                  <ul className="timeline-dash mt-8 space-y-3 text-sm">
+                    {phase.activities.map((activity) => (
+                      <li key={activity}>{activity}</li>
+                    ))}
+                  </ul>
+                </article>
+              </FadeUp>
 
-                <MotionDiv
-                  initial={{ opacity: 0, y: 20, scale: 0.98 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, amount: 0.32 }}
-                  transition={{ duration: 0.5, ease: 'easeOut' }}
-                  className="card-hover glass-panel h-fit rounded-[1.5rem] p-6"
-                >
-                  <p className="kicker">Phase Signal</p>
-                  <p className="mt-4 text-sm text-[var(--color-text)]">{phase.signal}</p>
+              <MotionDiv
+                initial={{ opacity: 0, y: 20, scale: 0.98 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, amount: 0.32 }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
+                className="card-hover glass-panel h-fit rounded-[1.5rem] p-6"
+              >
+                <p className="kicker">Phase Signal</p>
+                <p className="mt-4 text-sm text-[var(--color-text)]">{phase.signal}</p>
 
-                  <div className="gold-frost mt-6 rounded-xl p-4">
-                    <p className="text-[10px] uppercase tracking-[0.16em] text-[var(--color-gold)]">
-                      {phase.metricLabel}
-                    </p>
-                    <p className="mt-2 font-heading text-4xl text-[var(--color-white)]">
-                      {phase.metricValue}
-                    </p>
-                  </div>
+                <div className="gold-frost mt-6 rounded-xl p-4">
+                  <p className="text-[10px] uppercase tracking-[0.16em] text-[var(--color-gold)]">
+                    {phase.metricLabel}
+                  </p>
+                  <p className="mt-2 font-heading text-4xl text-[var(--color-white)]">
+                    {phase.metricValue}
+                  </p>
+                </div>
 
-                  <div className="mt-5 grid gap-2 text-[11px] uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
-                    <p className="glass-soft rounded-lg px-3 py-2">Finance ownership visible</p>
-                    <p className="glass-soft rounded-lg px-3 py-2">Governance checkpoints active</p>
-                  </div>
-                </MotionDiv>
-              </div>
+                <div className="mt-5 grid gap-2 text-[11px] uppercase tracking-[0.16em] text-[var(--color-text-muted)]">
+                  <p className="glass-soft rounded-lg px-3 py-2">Finance ownership visible</p>
+                  <p className="glass-soft rounded-lg px-3 py-2">Governance checkpoints active</p>
+                </div>
+              </MotionDiv>
             </div>
           </div>
         </section>
