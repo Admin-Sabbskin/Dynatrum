@@ -240,14 +240,15 @@ a {
 }
 
 .btn-ghost {
-  border: 1px solid var(--color-border);
-  background: transparent;
-  color: var(--color-text);
+  border: 1px solid rgba(201, 174, 115, 0.42);
+  background: rgba(201, 174, 115, 0.06);
+  color: var(--color-gold);
 }
 
 .btn-ghost:hover {
-  border-color: rgba(196, 169, 107, 0.5);
-  background: rgba(196, 169, 107, 0.12);
+  border-color: rgba(201, 174, 115, 0.85);
+  background: rgba(201, 174, 115, 0.16);
+  color: #ddc793;
 }
 
 .btn-subtle {

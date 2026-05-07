@@ -209,20 +209,26 @@ function Phase0() {
         </div>
       </section>
 
-      <section className="section-shell py-16 text-center md:py-20">
-        <FadeUp>
-          <h2 className="text-gradient-gold">Turn ERP from a risk into a controlled program.</h2>
-        </FadeUp>
-        <FadeUp delay={0.05}>
-          <p className="mx-auto mt-4 max-w-2xl text-[var(--color-text-muted)]">
-            Start with a Phase 0 conversation. No obligation.
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.1}>
-          <Button to="/contact" variant="primary" className="mt-8">
-            Book Consultation
-          </Button>
-        </FadeUp>
+      <section className="section-shell py-20 md:py-24">
+        <div className="section-rule" aria-hidden="true" />
+        <div className="mt-16">
+          <FadeUp>
+            <p className="kicker">Next Step</p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-4 max-w-3xl text-gradient-gold">Turn ERP from a risk into a controlled program.</h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-2xl text-[var(--color-text-muted)]">
+              Start with a Phase 0 conversation. No obligation.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <Button to="/contact" variant="primary" className="mt-8">
+              Book Consultation
+            </Button>
+          </FadeUp>
+        </div>
       </section>
     </>
   )

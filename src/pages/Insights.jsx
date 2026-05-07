@@ -125,20 +125,26 @@ function Insights() {
         </div>
       </section>
 
-      <section className="section-shell py-16 text-center md:py-20">
-        <FadeUp>
-          <h2 className="text-gradient-gold">Want a topic covered?</h2>
-        </FadeUp>
-        <FadeUp delay={0.05}>
-          <p className="mx-auto mt-4 max-w-2xl text-[var(--color-text-muted)]">
-            Email us a question and we'll address it in an upcoming article.
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.1}>
-          <Button to="/contact" variant="primary" className="mt-8">
-            Get in Touch
-          </Button>
-        </FadeUp>
+      <section className="section-shell py-20 md:py-24">
+        <div className="section-rule" aria-hidden="true" />
+        <div className="mt-16">
+          <FadeUp>
+            <p className="kicker">Suggest a topic</p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-4 max-w-3xl text-gradient-gold">Want a topic covered?</h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-2xl text-[var(--color-text-muted)]">
+              Email us a question and we'll address it in an upcoming article.
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <Button to="/contact" variant="primary" className="mt-8">
+              Get in Touch
+            </Button>
+          </FadeUp>
+        </div>
       </section>
     </>
   )
