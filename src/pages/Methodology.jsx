@@ -188,22 +188,22 @@ function Methodology() {
         </FadeUp>
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          <div className="glass-panel rounded-2xl p-7">
+          <div className="glass-panel flex h-full flex-col rounded-2xl p-7">
             <p className="kicker">Phase 1 · Crawl</p>
             <h3 className="mt-4">Core ERP first</h3>
-            <p className="mt-3 text-sm text-[var(--color-text-muted)]">GL, AP, AR, and the close cycle.</p>
+            <p className="mt-3 flex-1 text-sm text-[var(--color-text-muted)]">GL, AP, AR, and the close cycle.</p>
             <p className="mt-5 text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Target: 3–4 months</p>
           </div>
-          <div className="glass-panel rounded-2xl p-7">
+          <div className="glass-panel flex h-full flex-col rounded-2xl p-7">
             <p className="kicker">Phase 2 · Walk</p>
             <h3 className="mt-4">Operational depth</h3>
-            <p className="mt-3 text-sm text-[var(--color-text-muted)]">Procurement and Inventory layered onto a stable core.</p>
+            <p className="mt-3 flex-1 text-sm text-[var(--color-text-muted)]">Procurement and Inventory layered onto a stable core.</p>
             <p className="mt-5 text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Target: 2–3 months</p>
           </div>
-          <div className="glass-panel rounded-2xl p-7">
+          <div className="glass-panel flex h-full flex-col rounded-2xl p-7">
             <p className="kicker">Phase 3 · Run</p>
             <h3 className="mt-4">Advanced and optimized</h3>
-            <p className="mt-3 text-sm text-[var(--color-text-muted)]">Advanced modules, integrations, and BI optimization.</p>
+            <p className="mt-3 flex-1 text-sm text-[var(--color-text-muted)]">Advanced modules, integrations, and BI optimization.</p>
             <p className="mt-5 text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">Target: 2–4 months</p>
           </div>
         </div>
@@ -249,7 +249,7 @@ function Methodology() {
               </defs>
 
               {phases.map((phase, index) => {
-                const x = 20 + index * 204
+                const x = 28 + index * 204
                 return (
                   <g key={phase.name}>
                     <rect
