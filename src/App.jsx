@@ -4,10 +4,14 @@ import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-route
 import Layout from './components/Layout'
 import {
   AboutPage,
+  AICopilotPage,
   CaseStudiesPage,
   ContactPage,
   HomePage,
+  IFRS18Page,
+  InsightsPage,
   MethodologyPage,
+  Phase0Page,
   ServicesPage,
   preloadRoute,
 } from './routePreload'
@@ -60,10 +64,42 @@ function AnimatedRoutes() {
               }
             />
             <Route
+              path="/phase-0"
+              element={
+                <RouteTransition>
+                  <Phase0Page />
+                </RouteTransition>
+              }
+            />
+            <Route
               path="/case-studies"
               element={
                 <RouteTransition>
                   <CaseStudiesPage />
+                </RouteTransition>
+              }
+            />
+            <Route
+              path="/insights"
+              element={
+                <RouteTransition>
+                  <InsightsPage />
+                </RouteTransition>
+              }
+            />
+            <Route
+              path="/insights/ai-copilot"
+              element={
+                <RouteTransition>
+                  <AICopilotPage />
+                </RouteTransition>
+              }
+            />
+            <Route
+              path="/insights/ifrs-18"
+              element={
+                <RouteTransition>
+                  <IFRS18Page />
                 </RouteTransition>
               }
             />

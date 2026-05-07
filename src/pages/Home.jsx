@@ -224,7 +224,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.3 }}
           >
-            <Button to="/contact" variant="primary">
+            <Button to="/phase-0" variant="primary">
               Start Phase 0
             </Button>
             <Button to="/methodology" variant="ghost">
@@ -616,6 +616,13 @@ function Home() {
             <p className="mt-10 max-w-3xl text-[var(--color-text-muted)]">
               Phase 0 turns ERP from a risk into a controlled program.
             </p>
+          </FadeUp>
+          <FadeUp delay={0.12}>
+            <div className="mt-6">
+              <Button to="/phase-0" variant="ghost">
+                Explore Phase 0 in Depth
+              </Button>
+            </div>
           </FadeUp>
         </div>
       </section>
