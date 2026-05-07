@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <header className="fixed inset-x-0 top-3 z-50 px-3 sm:px-4 md:top-4">
       <div
-        className={`nav-glass relative mx-auto w-[min(1180px,96vw)] rounded-[1.35rem] transition-all duration-300 ${
+        className={`nav-glass relative mx-auto w-[min(1360px,98vw)] rounded-[1.35rem] transition-all duration-300 ${
           isScrolled
             ? 'border-[rgba(255,255,255,0.28)] shadow-[0_20px_52px_rgba(0,0,0,0.36)]'
             : 'border-[rgba(255,255,255,0.16)] shadow-[0_12px_32px_rgba(0,0,0,0.24)]'
@@ -61,7 +61,7 @@ function Navbar() {
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary navigation">
+          <nav className="hidden items-center gap-1 xl:gap-2 lg:flex" aria-label="Primary navigation">
             {navigationRoutes.map((route) => (
               <NavLink
                 key={route.to}
@@ -76,7 +76,7 @@ function Navbar() {
                   void preloadRoute(route.to)
                 }}
                 className={({ isActive }) =>
-                  `rounded-full border px-3 py-1.5 text-sm transition-all duration-200 ${
+                  `rounded-full border px-2.5 py-1.5 text-[13px] xl:text-sm whitespace-nowrap transition-all duration-200 ${
                     isActive
                       ? 'border-[rgba(201,174,115,0.5)] bg-[rgba(201,174,115,0.16)] text-[var(--color-gold)] shadow-[0_0_0_1px_rgba(201,174,115,0.12)]'
                       : 'border-transparent text-[var(--color-text-muted)] hover:border-[rgba(240,244,250,0.24)] hover:bg-[rgba(255,255,255,0.08)] hover:text-[var(--color-text)]'
