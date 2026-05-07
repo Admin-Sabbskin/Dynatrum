@@ -5,7 +5,7 @@ import FadeUp from '../components/FadeUp'
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-const CONTACT_EMAIL = 'hello@dynatrum.com'
+const CONTACT_EMAIL = 'info@dynatrum.com'
 
 function Contact() {
   const formRef = useRef(null)

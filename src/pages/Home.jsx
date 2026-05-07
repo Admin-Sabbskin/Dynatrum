@@ -503,6 +503,125 @@ function Home() {
 
       <section className="section-shell py-20">
         <FadeUp>
+          <p className="kicker">The Reality</p>
+        </FadeUp>
+        <FadeUp delay={0.05}>
+          <h2 className="mt-4 max-w-3xl">Why ERP programs fail.</h2>
+        </FadeUp>
+        <FadeUp delay={0.08}>
+          <p className="mt-4 max-w-3xl text-[var(--color-text-muted)]">
+            Over 70% of ERP initiatives fail to meet their original business case &mdash; not
+            because of technology, but because of weak requirements, poor governance, and
+            uncontrolled scope.
+          </p>
+        </FadeUp>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {[
+            'Scope creep disguised as enhancements',
+            'Weak requirements lead to endless redesign cycles',
+            'Data migration and controls work underestimated',
+            'Governance that doesn\u2019t hold',
+            'Change fatigue across teams',
+            'TCO never properly calculated upfront',
+          ].map((item, index) => (
+            <FadeUp key={item} delay={0.06 + index * 0.04}>
+              <article className="glass-panel h-full rounded-2xl p-6">
+                <p className="font-heading text-2xl text-[var(--color-gold)]/80">0{index + 1}</p>
+                <p className="mt-3 text-sm text-[var(--color-text)]">{item}</p>
+              </article>
+            </FadeUp>
+          ))}
+        </div>
+
+        <FadeUp delay={0.1}>
+          <p className="mt-10 text-sm text-[var(--color-text-muted)]">
+            &gt;70% of recently implemented ERP initiatives will fail to fully meet their
+            original business-case goals. <span className="text-[var(--color-text)]/70">(Source: Industry research)</span>
+          </p>
+        </FadeUp>
+      </section>
+
+      <section className="aurora-band relative py-20">
+        <div className="section-shell">
+          <div className="section-rule" aria-hidden="true" />
+        </div>
+        <div className="section-shell">
+          <FadeUp>
+            <p className="kicker">Phase 0</p>
+          </FadeUp>
+          <FadeUp delay={0.05}>
+            <h2 className="mt-4 max-w-3xl">Where ERP success is decided.</h2>
+          </FadeUp>
+          <FadeUp delay={0.08}>
+            <p className="mt-4 max-w-3xl text-[var(--color-text-muted)]">
+              Phase 0 is not optional. It is the control layer that defines scope, cost, and
+              execution discipline before any vendor is selected.
+            </p>
+          </FadeUp>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {[
+              {
+                step: 'Step 1',
+                title: 'Discover',
+                bullets: [
+                  'Cross-functional process mapping (Finance, Ops, Procurement, IT)',
+                  'Control gaps and pain points across all departments',
+                  'Capacity, resource, and risk assessment',
+                ],
+                outcome: 'Clarity on current state and risk.',
+              },
+              {
+                step: 'Step 2',
+                title: 'Define',
+                bullets: [
+                  'URS + requirements matrix (Must / Should / Could)',
+                  'ERP boundary clarity across all functions',
+                  'Target data architecture + reporting structure',
+                ],
+                outcome: 'A clear, prioritized blueprint.',
+              },
+              {
+                step: 'Step 3',
+                title: 'Select',
+                bullets: [
+                  'Scripted demos (no vendor theatre)',
+                  'Weighted scorecards across all stakeholder priorities',
+                  'Implementation-ready scope pack',
+                ],
+                outcome: 'Confident, data-driven decision.',
+              },
+            ].map((phase, index) => (
+              <FadeUp key={phase.title} delay={0.06 + index * 0.05}>
+                <article className="glass-panel h-full rounded-2xl p-7">
+                  <p className="text-xs uppercase tracking-[0.18em] text-[var(--color-gold)]">
+                    {phase.step}
+                  </p>
+                  <h3 className="mt-3">{phase.title}</h3>
+                  <ul className="timeline-dash mt-5 space-y-2.5 text-sm text-[var(--color-text)]">
+                    {phase.bullets.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
+                  <div className="gold-frost mt-6 rounded-xl p-3 text-xs text-[var(--color-text)]">
+                    Outcome: {phase.outcome}
+                  </div>
+                </article>
+              </FadeUp>
+            ))}
+          </div>
+
+          <FadeUp delay={0.1}>
+            <p className="mt-10 max-w-3xl text-[var(--color-text-muted)]">
+              Phase 0 turns ERP from a risk into a controlled program.
+            </p>
+          </FadeUp>
+        </div>
+      </section>
+
+      <section className="section-shell py-20">
+        <FadeUp>
           <p className="kicker">What We Do</p>
         </FadeUp>
         <FadeUp delay={0.05}>

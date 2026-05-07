@@ -69,10 +69,10 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@dynatrum.com"
+                  href="mailto:info@dynatrum.com"
                   className="transition-colors hover:text-[var(--color-text)]"
                 >
-                  hello@dynatrum.com
+                  info@dynatrum.com
                 </a>
               </li>
             </ul>
